@@ -1,0 +1,7 @@
+#!/usr/bin/bash
+
+rm -rf out/*
+rm pasmotd
+
+fpc pasmotd.pas -O4 -FE"out/"
+cp out/pasmotd ./pasmotd
