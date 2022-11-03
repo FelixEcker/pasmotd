@@ -1,5 +1,5 @@
 # pasmotd
-Program to output an ANSI-Formatted MOTD in console
+Program to output an ANSI-Formatted MOTD in console. You can build it from source and install manually, or if you are cool and use arch, install it [from the aur](https://aur.archlinux.org/packages/pasmotd).
 
 ## Usage
 `pasmotd [--help] <color> <styles, seperated with whitespace>`
