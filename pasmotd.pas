@@ -1,4 +1,4 @@
-{$mode objfpc}
+{$mode fpc}
 program pasmotd;
 
 {        pasmotd - pascal message of the day          }
@@ -52,40 +52,40 @@ end;
 function GetColor(const AColor: String): Word;
 begin
   case AColor of
-    'black':         result := 30;
-    'red':           result := 31;
-    'green':         result := 32;
-    'yellow':        result := 33;
-    'blue':          result := 34;
-    'magenta':       result := 35;
-    'cyan':          result := 36;
-    'white':         result := 37;
-    'brightblack':   result := 90;
-    'brightred':     result := 91;
-    'brightgreen':   result := 92;
-    'brightyellow':  result := 93;
-    'brightblue':    result := 94;
-    'brightmagenta': result := 95;
-    'brightcyan':    result := 96;
-    'brightwhite':   result := 97;
+    'black':         GetColor := 30;
+    'red':           GetColor := 31;
+    'green':         GetColor := 32;
+    'yellow':        GetColor := 33;
+    'blue':          GetColor := 34;
+    'magenta':       GetColor := 35;
+    'cyan':          GetColor := 36;
+    'white':         GetColor := 37;
+    'brightblack':   GetColor := 90;
+    'brightred':     GetColor := 91;
+    'brightgreen':   GetColor := 92;
+    'brightyellow':  GetColor := 93;
+    'brightblue':    GetColor := 94;
+    'brightmagenta': GetColor := 95;
+    'brightcyan':    GetColor := 96;
+    'brightwhite':   GetColor := 97;
   else
-    result := 37;
+    GetColor := 37;
   end;
 end;
 
 function GetStyling(const AStyle: String): Word;
 begin
   case AStyle of
-    'normal':     result := 0;
-    'bold':       result := 1;
-    'dim':        result := 2;
-    'italic':     result := 3;
-    'underline':  result := 4;
-    'slowblink':  result := 5;
-    'rapidblink': result := 6;
-    'reverse':    result := 7;
+    'normal':     GetStyling := 0;
+    'bold':       GetStyling := 1;
+    'dim':        GetStyling := 2;
+    'italic':     GetStyling := 3;
+    'underline':  GetStyling := 4;
+    'slowblink':  GetStyling := 5;
+    'rapidblink': GetStyling := 6;
+    'reverse':    GetStyling := 7;
   else
-    result := 0;
+    GetStyling := 0;
   end;
 end;
 

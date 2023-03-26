@@ -1,8 +1,0 @@
-#!/usr/bin/bash
-
-mkdir -p out/
-rm out/*
-rm pasmotd
-
-fpc pasmotd.pas -O4 -XX -Xs -FE"out/"
-cp out/pasmotd ./pasmotd
