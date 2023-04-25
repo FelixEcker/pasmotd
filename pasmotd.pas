@@ -3,11 +3,11 @@ program pasmotd;
 
 {        pasmotd - pascal message of the day          }
 {                                                     }
-{ author: FelixEcker                                  } 
+{ author: Marie Eckert                                } 
 { git-repo: https://github.com/FelixEcker/pasmotd.git }
 { Licensed under the ISC License, see below           }
 
-(* Copyright (c) 2022, Felix Eckert                                         *)
+(* Copyright (c) 2022, Marie Eckert                                         *)
 (*                                                                          *)
 (* Permission to use, copy, modify, and/or distribute this software for any *)
 (* purpose with or without fee is hereby granted, provided that the above   *)
