@@ -1,0 +1,37 @@
+sector config
+  section scripts
+    str directories '#!/bin/bash
+if [[ ! -d obj/ ]]; then
+  mkdir obj
+fi'
+
+    str compile_command 'fpc $(/config/mariebuild/source) -FE"obj/" '
+  end
+
+  section mariebuild
+    str build_type 'full'
+
+    str source 'pasmotd.pas'
+
+    list str targets 'debug', 'release'
+    str default 'debug'
+  end
+end
+
+sector targets
+  section debug
+    str exec '#!/bin/bash
+$(/config/scripts/directories)
+$(/config/scripts/compile_command) -g -dDEBUG
+mv obj/pasmotd .
+'
+  end
+
+  section release
+    str exec '#!/bin/bash
+$(/config/scripts/directories)
+$(/config/scripts/compile_command) -O4 -XX -Xs
+mv obj/pasmotd .
+'
+  end
+end

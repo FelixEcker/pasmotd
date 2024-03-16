@@ -1,10 +1,10 @@
 #!/bin/sh
 
-mkdir -p out
-rm -rf out/*
+mkdir -p obj
+rm -rf obj/*
 
 if [[ $1 == debug ]]; then
-  fpc pasmotd.pas -FE"out/" -Fu"inc/" -g -dDEBUG
+  fpc pasmotd.pas -FE"obj/" -Fu"inc/" -g -dDEBUG
 else
-  fpc pasmotd.pas -FE"out/" -Fu"inc/" -O4 -Xs -XX
+  fpc pasmotd.pas -FE"obj/" -Fu"inc/" -O4 -Xs -XX
 fi

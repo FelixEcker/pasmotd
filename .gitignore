@@ -1,2 +1,3 @@
 pasmotd
-out/**
+*.o
+obj/**
